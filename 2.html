@@ -56,7 +56,6 @@
            </tbody>
        </table>
    </section>
-   
    <section id="login">
        <h2>Login</h2>
        <form action="login.php" method="post">
@@ -66,34 +65,36 @@
            <label for="password">Password:</label>
            <input type="password" id="password" name="password" required>
            <br>
-           
-           <label for="dob">Tanggal Lahir:</label>
-           <input type="date" id="dob" name="dob" required>
-           <br>
-           
-           <label for="file">Upload File:</label>
-           <input type="file" id="file" name="file">
-           <br>
-           
-           <label>
-               <input type="checkbox" name="remember"> Ingat Saya
-           </label>
-           <br>
-           
-           <label>Pilih Gender:</label>
-           <input type="radio" id="male" name="gender" value="male"> <label for="male">Laki-laki</label>
-           <input type="radio" id="female" name="gender" value="female"> <label for="female">Perempuan</label>
-           <br>
-           
-           <label for="search">Cari:</label>
-           <input type="search" id="search" name="search">
-           <br>
-           
            <button type="submit">Login</button>
        </form>
+   </section>
+   <section id="tanggal lahir">
+    <h2>Date</h2>
+    <form>
+        <label for="dob">Tanggal Lahir:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br>
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" required>
+        <br>
+        <label>
+            <input type="checkbox" name="terms" required>
+            Saya menyetujui syarat dan ketentuan
+        </label>
+        <br>
+        <label for="gender">Jenis Kelamin:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Laki-laki</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Perempuan</label>
+        <br>
+        <label for="search">Cari:</label>
+        <input type="search" id="search" name="search">
+    </form>
    </section>
    <footer>
        &copy; 2025
    </footer>
 </body>
 </html>
+    
