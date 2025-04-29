@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Contoh DOM JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh JavaScript & DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #2980b9;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red; 
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h1>JavaScript & DOM (Document Object Model)</h1>
-  <p>Contoh manipulasi DOM dengan JavaScript:</p>
-  <div class="box" id="colorBox" style="background-color: rgb(52, 152, 219); width: 100px; height: 100px;"></div>
-  <button onclick="changeColor()">Ubah Warna</button>
+    <h1>Belajar JavaScript & DOM</h1>
+    <p>Klik tombol untuk mengganti warna kotak:</p>
 
-  <script>
-    // Seleksi elemen DOM dan event handling
-    function changeColor() {
-      const box = document.getElementById('colorBox');
-      box.style.backgroundColor = box.style.backgroundColor === 'tomato' ? '#3498db' : 'tomato';
-    }
-  </script>
+    <div class="box" id="colorBox"></div>
+    <button id="changeBtn">Ganti Warna</button>
+    <p id="status">Warna saat ini: Merah</p>
+
+    <script>
+        const box = document.getElementById('colorBox');
+        const button = document.getElementById('changeBtn');
+        const statusText = document.getElementById('status');
+
+        const colors = ['red', 'orange', 'pink', 'cyan', 'black']; 
+        let colorIndex = 0;
+
+        button.addEventListener('click', function () {
+            colorIndex = (colorIndex + 1) % colors.length;
+            const currentColor = colors[colorIndex];
+            box.style.backgroundColor = currentColor;
+            statusText.textContent = "Warna saat ini: " +
+                currentColor.charAt(0).toUpperCase() + currentColor.slice(1);
+        });
+    </script>
 </body>
 </html>
