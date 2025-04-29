@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh DOM JavaScript</title>
+</head>
+<body>
+  <h1>JavaScript & DOM (Document Object Model)</h1>
+  <p>Contoh manipulasi DOM dengan JavaScript:</p>
+  <div class="box" id="colorBox" style="background-color: rgb(52, 152, 219); width: 100px; height: 100px;"></div>
+  <button onclick="changeColor()">Ubah Warna</button>
+
+  <script>
+    // Seleksi elemen DOM dan event handling
+    function changeColor() {
+      const box = document.getElementById('colorBox');
+      box.style.backgroundColor = box.style.backgroundColor === 'tomato' ? '#3498db' : 'tomato';
+    }
+  </script>
+</body>
+</html>
