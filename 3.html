@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-    <title>Pertemuan 2 HTML Dasar</title>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -7,210 +6,245 @@
     <title>Pertemuan 3 Styling dengan CSS</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 0;
+            background-color: #f0f2f5;
         }
-        
+
+        header {
+            background-color: #007BFF;
+            padding: 15px 0;
+            text-align: center;
+        }
+
         header a {
             text-decoration: none;
             font-weight: bold;
-            color: blue;
+            color: white;
+            font-size: 24px;
         }
 
-        main {
-            margin-bottom: 20px;
+        main, section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-       #gambar img {
-    width: 150px;
-    height: 150px; /* Bisa diatur sesuai keinginan */
-    object-fit: cover; /* Agar tetap proporsional tanpa distorsi */
-}
+        h1, h2 {
+            color: #333;
+        }
 
+        p, li, label {
+            color: #555;
+        }
 
-        /* Styling form */
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Form styling */
         form {
-            max-width: 300px;
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
+            display: flex;
+            flex-direction: column;
         }
 
         input, select, button {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border-radius: 4px;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
             border: 1px solid #ccc;
-            box-sizing: border-box;
+            font-size: 16px;
         }
 
         #username {
-            background: green;
+            background-color: #28a745;
             color: white;
         }
 
         .bg-grey {
-            background: grey;
+            background-color: #6c757d;
             color: white;
         }
 
         input[type="submit"] {
-            background: red;
+            background-color: #dc3545;
             color: white;
-            border: none;
             cursor: pointer;
+            border: none;
         }
 
         button {
-            background: blue;
+            background-color: #007BFF;
             color: white;
-            border: none;
             cursor: pointer;
+            border: none;
         }
 
         button:hover, input[type="submit"]:hover {
-            opacity: 0.8;
+            opacity: 0.9;
         }
 
-        /* Table responsive */
-        .table-container {
-            overflow-x: auto;
-            margin-top: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
+        footer {
+            background-color: #343a40;
             text-align: center;
+            padding: 15px;
+            color: white;
+            margin-top: 30px;
         }
 
-        /* Responsiveness */
-        @media screen and (max-width: 700px) {
-            .col- { width: 50%; }
-        }
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            main, section {
+                margin: 10px;
+                padding: 15px;
+            }
 
-        @media screen and (max-width: 450px) {
-            .col- { width: 100%; }
+            header a {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header style="text-align: center;">
+
+    <header>
         <a href="https://ipwija.ac.id">Home</a>
-    </header> 
-   
-   <main id="main">
-       <h1>Hi</h1>
-   </main>
-   
-   <section>
-       <h2>Hallo World</h2>
-   </section>
-   
-   <section id="image">
-       <h2>Gambar</h2>
-       <img src="bmw m4 comp.jpeg" alt="Gambar dari Pinterest" width="500" style="display: block; margin: auto;">
-   </section>
-   
-   <section>
-       <h1>Pertemuan 2 Pemrograman Web</h1>
-       <h2>HTML Dasar</h2>
-       <p>Pertemuan 2 dasar HTML membuat paragraf sederhana dengan huruf <i>miring</i>, <b>tebal</b>.</p>
-       
-       <ul>
-           <li>1</li>
-       </ul>
-       
-       <ol>
-           <li>Satu</li>
-       </ol>
-   </section>
-   
-   <section id="table">
-       <h2>Tabel</h2>
-       <table border="1">
-           <thead>  
-               <tr>
-                   <th>Jan</th>
-                   <th>Feb</th>
-               </tr>
-           </thead>
-           <tbody>  
-               <tr>
-                   <td>1</td>
-                   <td>2</td>
-               </tr>
-               <tr>
-                   <td>2</td>
-                   <td>4</td>
-               </tr>
-           </tbody>
-       </table>
-   </section>
-   <section id="login">
-    <h2>Login</h2>
-    <form action="login.php" method="post">
-        <label for="username">Username:</label>
-        <input id="username" type="text">
+    </header>
 
-        <label for="password">Password:</label>
-        <input id="password" class="bg-grey" type="password">
+    <main id="main">
+        <h1>Hi</h1>
+    </main>
 
-        <label for="color">Warna:</label>
-        <input id="color" class="bg-grey" type="color">
+    <section>
+        <h2>Hallo World</h2>
+    </section>
 
-        <label for="dropdown">Dropdown:</label>
-        <select id="dropdown">
-            <option>1</option>
-            <option>2</option>
-        </select>
+    <section id="image">
+        <h2>Gambar</h2>
+        <img src="bmw m4 comp.jpeg" alt="Gambar dari Pinterest">
+    </section>
 
-        <input type="submit" value="Cancel">
-        <button type="submit">Login</button>
-    </form>
-</section>
-   <section id="tanggal lahir">
-    <h2>Date</h2>
-    <form>
-        <label for="dob">Tanggal Lahir:</label>
-        <input type="date" id="dob" name="dob" required>
-        <br>
-        <label for="file">Upload File:</label>
-        <input type="file" id="file" name="file" required>
-        <br>
-        <label>
-            <input type="checkbox" name="terms" required>
-            Saya menyetujui syarat dan ketentuan
-        </label>
-        <br>
-        <label for="gender">Jenis Kelamin:</label>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Laki-laki</label>
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Perempuan</label>
-        <br>
-        <label for="search">Cari:</label>
-        <input type="search" id="search" name="search">
-    </form>
-   </section>
-   <footer>
-       &copy; 2025
-   </footer>
+    <section>
+        <h1>Pertemuan 2 Pemrograman Web</h1>
+        <h2>HTML Dasar</h2>
+        <p>Pertemuan 2 dasar HTML membuat paragraf sederhana dengan huruf <i>miring</i>, <b>tebal</b>.</p>
+
+        <ul>
+            <li>1</li>
+        </ul>
+
+        <ol>
+            <li>Satu</li>
+        </ol>
+    </section>
+
+    <section id="table">
+        <h2>Tabel</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label>
+            <input id="username" type="text" placeholder="Masukkan username">
+
+            <label for="password">Password:</label>
+            <input id="password" class="bg-grey" type="password" placeholder="Masukkan password">
+
+            <label for="color">Warna:</label>
+            <input id="color" class="bg-grey" type="color">
+
+            <label for="dropdown">Dropdown:</label>
+            <select id="dropdown">
+                <option>1</option>
+                <option>2</option>
+            </select>
+
+            <input type="submit" value="Cancel">
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="tanggal-lahir">
+        <h2>Date</h2>
+        <form>
+            <label for="dob">Tanggal Lahir:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" required>
+
+            <label>
+                <input type="checkbox" name="terms" required>
+                Saya menyetujui syarat dan ketentuan
+            </label>
+
+            <label for="gender">Jenis Kelamin:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Perempuan</label>
+
+            <label for="search">Cari:</label>
+            <input type="search" id="search" name="search">
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 IPWIJA
+    </footer>
+
 </body>
 </html>
-    
